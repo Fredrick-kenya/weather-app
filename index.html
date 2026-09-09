@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather App</title>
+        <style>
+            .weather-card{
+    width: 300px;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    border: 1px solid #ddd;
+    color: white;
+}
+.search-box{
+    display: flex;
+    gap:8px;
+    #cityInput{
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 200px;
+}
+
+#searchBtn{
+    padding: 8px 14px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    border: none;
+} 
+#searchBtn:hover{
+    opacity: 0.8;
+}
+#searchBtn:active{
+    transform: scale(0.97);
+}
+}
+body{
+    font-family:Arial,sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin: 0;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom,
+                               green 0%,
+                               green 50%,
+                               magenta 100%);
+}
+h1{
+    margin-bottom: 20px;
+}
+@media (max-width: 500px){
+    .weather-card{
+        width : 90;
+    }
+    #cityInput{
+        width: 160px;
+    }
+    .search-box{
+        width:100%;
+        justify-content: center;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <h1>Weather App</h1>
+        <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city"><br>
+        <button id="searchBtn">Search</button><br>
+        </div>
+        <div id="weatherResult" class="weather-card"></div>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
