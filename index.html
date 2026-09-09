@@ -4,8 +4,9 @@
         <title>Weather App</title>
         <style>
             .weather-card{
-    width: 300px;
-    padding: 25px;
+    width: 100%;
+    min-height: calc(100vh - 170px);
+    box-sizing: border-box;
     margin-top: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -18,6 +19,7 @@
 .search-box{
     display: flex;
     gap:8px;
+}
     #cityInput{
     padding: 8px;
     font-size: 16px;
@@ -41,7 +43,7 @@
 #searchBtn:active{
     transform: scale(0.97);
 }
-}
+
 body{
     font-family:Arial,sans-serif;
     display:flex;
@@ -53,13 +55,14 @@ body{
                                green 0%,
                                green 50%,
                                magenta 100%);
+                               min-height: 100vh;
 }
 h1{
     margin-bottom: 20px;
 }
 @media (max-width: 500px){
     .weather-card{
-        width : 90;
+        width : 90%;
     }
     #cityInput{
         width: 160px;

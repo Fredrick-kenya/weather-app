@@ -17,8 +17,8 @@ let formattedWords=words.map(function(word){
 return formattedWords.join(" ");
 }
 let lastCity="";
-Search.addEventListener("click",async function(){
-let city=cityInput.value.trim().replace(/\s+/g," ");
+async function loadWeather(city){
+city=city.trim().replace(/\s+/g," ");
 if(city===""){
     weatherResult.innerHTML="Please enter a city.";
     return;
@@ -114,4 +114,8 @@ catch(error){
 finally{
     Search.disabled=false;
 }
+}
+Search.addEventListener("click",function(){
+    loadWeather(cityInput.value);
 });
+loadWeather("Nairobi");
